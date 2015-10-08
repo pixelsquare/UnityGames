@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AstarisAdventure\StreamingAssets\astarisAdventure.xml">
+    <Files>
+      <File FileName="Assets\AstarisAdventure\Scripts\Xml\AdvXML.cs" Line="17" Column="13" />
+      <File FileName="Assets\AstarisAdventure\StreamingAssets\astarisAdventure.xml" Line="20" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
