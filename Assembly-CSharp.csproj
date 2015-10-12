@@ -46,15 +46,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AstarisAdventure\Scripts\Buttons\ChoicesButtons.cs" />
+     <Compile Include="Assets\AstarisAdventure\Scripts\Buttons\WindowButtons.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextHandler.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextReader.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextWriter.cs" />
+     <Compile Include="Assets\AstarisAdventure\Scripts\Utils\AdvNames.cs" />
+     <Compile Include="Assets\AstarisAdventure\Scripts\Utils\AdvUtils.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvChoices.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvNode.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvRoot.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvXML.cs" />
+     <Compile Include="Assets\Utils\EventBroadcaster.cs" />
+     <Compile Include="Assets\Utils\ObjectListener.cs" />
+     <Compile Include="Assets\Utils\Parameters.cs" />
      <None Include="Assets\AstarisAdventure\StreamingAssets\astarisAdventure.xml" />
      <None Include="Assets\Minesweeper\Version Number.txt" />
+     <None Include="Assets\Resources\astarisAdventure.xml" />
      <None Include="Assets\Platformer\Version Number.txt" />
      <None Include="Assets\AstarisAdventure\Version Number.txt" />
      <None Include="Assets\Snake\Version Number.txt" />
