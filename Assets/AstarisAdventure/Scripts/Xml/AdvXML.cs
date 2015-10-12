@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 public class AdvXML : MonoBehaviour {
+	[SerializeField]
+	private bool saveInResources = true;
+
+	[SerializeField]
+	private bool saveLocal = true;
 
 	private AdvRoot root;
 
@@ -15,8 +20,14 @@ public class AdvXML : MonoBehaviour {
 		Node2();
 		Node3();
 		EndNode();
-		
-		root.Save(Path.Combine(Application.dataPath + "/AstarisAdventure/StreamingASsets/", "astarisAdventure.xml"));
+
+		if (saveInResources) {
+			root.Save(Path.Combine(Application.dataPath + "/Resources/", "astarisAdventure.xml"));
+		}
+
+		if (saveLocal) {
+			root.Save(Path.Combine(Application.dataPath + "/AstarisAdventure/StreamingASsets/", "astarisAdventure.xml"));
+		}
 	}
 
 	public void StartNode() {
@@ -29,10 +40,11 @@ public class AdvXML : MonoBehaviour {
 			"\"Hah, no one really is around.\"",
 			"But, as I looked behind me, I managed to see something from a distance. It's a/an..."
 		}, new AdvChoices[3] {
-			new AdvChoices("choice_1", "Oasis"),
-			new AdvChoices("choice_2", "Person riding a camel"),
-			new AdvChoices("choice_3", "Long Caravan")
+			new AdvChoices("oasis", "Oasis"),
+			new AdvChoices("camel", "Person riding a camel"),
+			new AdvChoices("caravan", "Long Caravan")
 		});
+
 		root.nodes[0] = startNode;
 	}
 
@@ -42,11 +54,11 @@ public class AdvXML : MonoBehaviour {
 			"\"Is that really an oasis though?\" I scrutinized.",
 			"Well, it was dry out here and I do need some water. I think I should..."
 		}, new AdvChoices[2] {
-			new AdvChoices("choice_1", "Walk to the oasis"),
-			new AdvChoices("choice_2", "Stay here")
+			new AdvChoices("walk", "Walk to the oasis"),
+			new AdvChoices("stay", "Stay here")
 		});
 		
-		AdvNode node1 = new AdvNode("node1", new string[8] {
+		AdvNode node1 = new AdvNode("walk", new string[8] {
 			"I think I should walk to the oasis. It makes sense to drink water from it right?",
 			"\"I really don't want to be dehydrated.\"",
 			"With quenching my thirst in mind, I walked towards the oasis. It was a long walk but, it was worth it because, it was a real oasis.",
@@ -58,7 +70,7 @@ public class AdvXML : MonoBehaviour {
 		}, new AdvChoices("end", "END!"));
 		oasis.AddNode(node1);
 
-		AdvNode node2 = new AdvNode("node2", new string[5] {
+		AdvNode node2 = new AdvNode("stay", new string[5] {
 			"I think I should stay here and keep on the look out for real stuff. I mean that might just be an illusion.",
 			"When I reach that place, that oasis will probably disappear.",
 			"Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught up to me due to dehydration.",
@@ -87,20 +99,20 @@ public class AdvXML : MonoBehaviour {
 			"\"Heh. I can let you ride on the camel and I'll take you there. How's that?\"",
 			"\"I...",
 		}, new AdvChoices[2] {
-			new AdvChoices("choice_1", "only need to know the directions. I can manage.\""),
-			new AdvChoices("choice_2", "guess I'll go for a ride. It makes things easier.\"")
+			new AdvChoices("directions", "only need to know the directions. I can manage.\""),
+			new AdvChoices("ride", "guess I'll go for a ride. It makes things easier.\"")
 		});
 
-		AdvNode node1 = new AdvNode("node1", new string[3] {
+		AdvNode node1 = new AdvNode("directions", new string[3] {
 			"\"I only need to know the directions. I can manage.\"",
 			"With those words, the man on his camel left on a huff. He seemed to be angry at me as he left.",
 			"Was that really necessary? I didn't know not riding on the camel was offensive in this place. Now, what do I do?"
 		}, new AdvChoices[2] {
-			new AdvChoices("choice_1", "Stay Here"),
-			new AdvChoices("choice_2", "Follow the direction the man on the camel went to:")
+			new AdvChoices("stay", "Stay Here"),
+			new AdvChoices("follow", "Follow the direction the man on the camel went to:")
 		});
 
-		AdvNode node1_1 = new AdvNode("node1_1", new string[4] {
+		AdvNode node1_1 = new AdvNode("stay", new string[4] {
 			"I think I should stay here and keep on the look out.",
 			"Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught to me due to dehydration.",
 			"Falling into a slump on the sandy ground, I passed out.",
@@ -108,7 +120,7 @@ public class AdvXML : MonoBehaviour {
 		}, new AdvChoices("end", "END!"));
 		node1.AddNode(node1_1);
 
-		AdvNode node1_2 = new AdvNode("node1_2", new string[22] {
+		AdvNode node1_2 = new AdvNode("follow", new string[22] {
 			"Well, it's a very long walk. Somehow, I was wishing I rode that camel.",
 			"But, it was because that guy looked too suspicious to me. I wanted to be safe and sure.",
 			"Ah, I could've stolen the camel and rode it myself.",
@@ -135,7 +147,7 @@ public class AdvXML : MonoBehaviour {
 		node1.AddNode(node1_2);
 		camel.AddNode(node1);
 
-		AdvNode node2 = new AdvNode("node2", new string[15] {
+		AdvNode node2 = new AdvNode("ride", new string[15] {
 			"\"I guess I'll go for a ride. It makes things easier.\"",
 			"Helping my self up on the camel, we rode towards the nearest town. Good thing I rode with the man.",
 			"It would probably be a long walk ahead of me if I'd decided to just follow him later on.",
@@ -158,7 +170,7 @@ public class AdvXML : MonoBehaviour {
 	}
 
 	public void Node3() {
-		AdvNode caravan = new AdvNode("node3", new string[8] {
+		AdvNode caravan = new AdvNode("caravan", new string[8] {
 			"It's a long caravan.",
 			"Approaching the caravan, I asked if I could travel with them. Perhaps, I can find clues about Astaris during the travel?",
 			"Sadly, I was denied of entry not until I saw in one of their delivery wagons, an advertisement.",
@@ -168,12 +180,12 @@ public class AdvXML : MonoBehaviour {
 			"The leader of the caravan sighed, \"Why are you so desperate, young man?\"",
 			"Should I tell the truth or not about Astaris and about my amnesia?"
 		}, new AdvChoices[3] {
-			new AdvChoices("choice_1", "I'm going to tell the truth"),
-			new AdvChoices("choice_2", "I'm going to tell a little white lie."),
-			new AdvChoices("choice_3", "I'm not going to tell the truth"),
+			new AdvChoices("truth", "I'm going to tell the truth"),
+			new AdvChoices("whitelie", "I'm going to tell a little white lie."),
+			new AdvChoices("lie", "I'm not going to tell the truth"),
 		});
 
-		AdvNode node1 = new AdvNode("node1", new string[37] {
+		AdvNode node1 = new AdvNode("truth", new string[37] {
 			"And that's when I told everything. As soon as I showed the word behind the brooch to the leader of the caravan, he quickly decided to change the direction of the caravan.",
 			"\"Where are we going, sir?\"",
 			"\"To Astaris.\"",
@@ -214,7 +226,7 @@ public class AdvXML : MonoBehaviour {
 		}, new AdvChoices("end", "END!"));
 		caravan.AddNode(node1);
 
-		AdvNode node2 = new AdvNode("node2", new string[6] {
+		AdvNode node2 = new AdvNode("whitelie", new string[6] {
 			"I'm going to tell a little white lie. I'll leave out the thing about the Astaris and just mention about my amnesia.",
 			"\"You see, sir. Your caravan will give me opportunities to seek out the truth of who I am and where I came from. I woke up in the middle of the desert with no memories and your caravan is the first help I could find. I just want to survive and find out who I am.\"",
 			"Not totally convinced, it tooks some time for the leader to decide but, he finally agreed.",
@@ -224,7 +236,7 @@ public class AdvXML : MonoBehaviour {
 		}, new AdvChoices("end", "END!"));
 		caravan.AddNode(node2);
 
-		AdvNode node3 = new AdvNode("node3", new string[14] {
+		AdvNode node3 = new AdvNode("lie", new string[14] {
 			"I'm not going to tell the truth.",
 			"\"I really need the job, sir. I have no money and food. That is why I'm desperate. I want to continue living.\"",
 			"Reluctantly, the leader of the caravan agreed but with a condition of just having me take the job until the nearest town.",

@@ -21,4 +21,11 @@ public class AdvRoot {
 			return serializer.Deserialize(stream) as AdvRoot;
 		}
 	}
+
+	public static AdvRoot ParseXML(string xml) {
+		XmlSerializer serializer = new XmlSerializer(typeof(AdvRoot));
+		using (StringReader reader = new StringReader(xml)) {
+			return serializer.Deserialize(reader) as AdvRoot;
+		}
+	}
 }
