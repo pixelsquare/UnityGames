@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<AstarisAdventure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nodes>
+    <Node Name="start">
+      <Texts>
+        <Text>Waking up in the middle of the desert was never a good thing. Would you know anyone who would like to wake up in such a way? How about when you wake up without memories in the middle of the desert?</Text>
+        <Text>I know this sounds cliche but...</Text>
+        <Text>That's what happened to me. The single clue I have on me of who I am is just this brooch with a word, 'Astaris'.</Text>
+        <Text>Is that my name? I don't know, but, I'm sure I'll be using it.</Text>
+        <Text>Dusting off, I looked upon the loooooong desert. It was only dunes upon dunes. It was neverending dunes.</Text>
+        <Text>"Hah, no one really is around."</Text>
+        <Text>But, as I looked behind me, I managed to see something from a distance. It's a/an...</Text>
+      </Texts>
+      <Choices>
+        <Choice Name="oasis">
+          <Text>Oasis</Text>
+        </Choice>
+        <Choice Name="camel">
+          <Text>Person riding a camel</Text>
+        </Choice>
+        <Choice Name="caravan">
+          <Text>Long Caravan</Text>
+        </Choice>
+      </Choices>
+      <Nodes />
+    </Node>
+    <Node Name="oasis">
+      <Texts>
+        <Text>It's an oasis.</Text>
+        <Text>"Is that really an oasis though?" I scrutinized.</Text>
+        <Text>Well, it was dry out here and I do need some water. I think I should...</Text>
+      </Texts>
+      <Choices>
+        <Choice Name="walk">
+          <Text>Walk to the oasis</Text>
+        </Choice>
+        <Choice Name="stay">
+          <Text>Stay here</Text>
+        </Choice>
+      </Choices>
+      <Nodes>
+        <Node Name="walk">
+          <Texts>
+            <Text>I think I should walk to the oasis. It makes sense to drink water from it right?</Text>
+            <Text>"I really don't want to be dehydrated."</Text>
+            <Text>With quenching my thirst in mind, I walked towards the oasis. It was a long walk but, it was worth it because, it was a real oasis.</Text>
+            <Text>Forming my hands, I scooped up some water to drink.</Text>
+            <Text>"Ah, that was refreshing!"</Text>
+            <Text>Only to realize that the color of the supposed water was different. I drank something that's not water.</Text>
+            <Text>But, it was too late. The surroundings around me grew dim as I felt my heart coming slowly to a stop.</Text>
+            <Text>Sigh, I guess I'll never found out who I am. I'm so lame.</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+        <Node Name="stay">
+          <Texts>
+            <Text>I think I should stay here and keep on the look out for real stuff. I mean that might just be an illusion.</Text>
+            <Text>When I reach that place, that oasis will probably disappear.</Text>
+            <Text>Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught up to me due to dehydration.</Text>
+            <Text>Falling into a slump on the sandy ground, I passed out.</Text>
+            <Text>Really, no one stays in one spot under this heat. I should've died with a little more effort of moving around the place.</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+      </Nodes>
+    </Node>
+    <Node Name="camel">
+      <Texts>
+        <Text>It's a person riding a camel. Maybe he'll let me ride on that and take me on the nearest town?</Text>
+        <Text>I should call out to him.</Text>
+        <Text>"Hey! Over here!"</Text>
+        <Text>Oh, that person's making the camel go faster. Well, as fast as a camel can move I guess.</Text>
+        <Text>I should probably thank this person later... that is if he helps me. Maybe he knows something about Astaris?</Text>
+        <Text>Gesturing his camel to stop, what I saw on the camel was a man in his robes that was a bit tattered though shining on his waist was a scimitar, oddly new and was that...that hild golden? I was not entirely sure.</Text>
+        <Text>But, I'm amazed by his fast-changing facial expressions. When he arrived, his eyes were staring down at me like he was analyzing me then in the next moment, he grinned with glee. I wonder why.</Text>
+        <Text>Oh right, I should ask him where the nearest town is to get started.</Text>
+        <Text>"I want to ask for directions for the nearest town?"</Text>
+        <Text>"Hm, you're lost there, little guy?"</Text>
+        <Text>Ugh, I might be short but, I ain't a little guy. I think I can totally say that I'm average. Wait, I should answer him. He might go away.</Text>
+        <Text>"Yeah, that's why I'm asking."</Text>
+        <Text>"Heh. I can let you ride on the camel and I'll take you there. How's that?"</Text>
+        <Text>"I...</Text>
+      </Texts>
+      <Choices>
+        <Choice Name="directions">
+          <Text>only need to know the directions. I can manage."</Text>
+        </Choice>
+        <Choice Name="ride">
+          <Text>guess I'll go for a ride. It makes things easier."</Text>
+        </Choice>
+      </Choices>
+      <Nodes>
+        <Node Name="directions">
+          <Texts>
+            <Text>"I only need to know the directions. I can manage."</Text>
+            <Text>With those words, the man on his camel left on a huff. He seemed to be angry at me as he left.</Text>
+            <Text>Was that really necessary? I didn't know not riding on the camel was offensive in this place. Now, what do I do?</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="stay">
+              <Text>Stay Here</Text>
+            </Choice>
+            <Choice Name="follow">
+              <Text>Follow the direction the man on the camel went to:</Text>
+            </Choice>
+          </Choices>
+          <Nodes>
+            <Node Name="stay">
+              <Texts>
+                <Text>I think I should stay here and keep on the look out.</Text>
+                <Text>Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught to me due to dehydration.</Text>
+                <Text>Falling into a slump on the sandy ground, I passed out.</Text>
+                <Text>Really, no one stays in one spot under this heat. I should've died with a little more effort of moving around the place.</Text>
+              </Texts>
+              <Choices>
+                <Choice Name="end">
+                  <Text>END!</Text>
+                </Choice>
+              </Choices>
+              <Nodes />
+            </Node>
+            <Node Name="follow">
+              <Texts>
+                <Text>Well, it's a very long walk. Somehow, I was wishing I rode that camel.</Text>
+                <Text>But, it was because that guy looked too suspicious to me. I wanted to be safe and sure.</Text>
+                <Text>Ah, I could've stolen the camel and rode it myself.</Text>
+                <Text>Just then, I felt a small buzz from the brooch, "What was that?"</Text>
+                <Text>Shrugging, I ignored the sensation from the brooch and continued with my ranting thoughts as I quickly followed the hoofprints of the camel.</Text>
+                <Text>I want that camel. Maybe, the next man on a camel I see... I could steal it?</Text>
+                <Text>There it was again. A small buzz was felt from the brooch.</Text>
+                <Text>Hmm, it looks like the brooch doesn't want me to do something bad.</Text>
+                <Text>Hearing the sound of people talking, I looked up from staring at the hoof prints to see the place.</Text>
+                <Text>It was a small town. I could tell, because, as soon as I arrived I was immediately on its marketplace.</Text>
+                <Text>People were bustling around left and right. I wonder if I could get something to eat. The only problem is I don't have any money.</Text>
+                <Text>I know, I know, brooch. I'm not stealing anything.</Text>
+                <Text>I'm getting a job.</Text>
+                <Text>Looking around, I saw a familiar man around town whipping some people with no clothes.</Text>
+                <Text>Ooh, scary.</Text>
+                <Text>Anyways, I'm gonna steer clear away from that guy. There should be a decent job here somewhere.</Text>
+                <Text>Ah, there! It was a delivery wagon. Probably, a part of a caravan.</Text>
+                <Text>Stated on the paper stuck on it was an advertised job position of a porter though for a measly sum. There was free food during travels.</Text>
+                <Text>"Okay, I'm in!" I may look like this but, I have some body strength in me to carry a lot of heavy stuff. I hope.</Text>
+                <Text>Talking to the leader of the caravan, I applied for the position. He had a look of doubt but, when I demonstrated my strength. It was enough for him.</Text>
+                <Text>In the end, I journeyed with the caravan as I enjoyed my job. They became family.</Text>
+                <Text>Long forgotten is my quest for my identity and Astaris.</Text>
+              </Texts>
+              <Choices>
+                <Choice Name="end">
+                  <Text>end!</Text>
+                </Choice>
+              </Choices>
+              <Nodes />
+            </Node>
+          </Nodes>
+        </Node>
+        <Node Name="ride">
+          <Texts>
+            <Text>"I guess I'll go for a ride. It makes things easier."</Text>
+            <Text>Helping my self up on the camel, we rode towards the nearest town. Good thing I rode with the man.</Text>
+            <Text>It would probably be a long walk ahead of me if I'd decided to just follow him later on.</Text>
+            <Text>Man, I'm thirsty. The heat is still getting to me.</Text>
+            <Text>"Do you want some water?" Was he a mind-reader or what?</Text>
+            <Text>"Are you sure, sir?"</Text>
+            <Text>"You need it more than I do."</Text>
+            <Text>Eyeing the waterbottle curiously, "Erm, thanks," I drank the contents of it with the liquid spilling all over my lips.</Text>
+            <Text>Looks like I was that thirsty.</Text>
+            <Text>After that, the journey to the nearest town dragged on as I felt a bit sleepy. Even though I wanted to stay awake, I was too tired and the ride was making me too relaxed.</Text>
+            <Text>Almost an hour passed, I woke up abruptly as I felt the hot sandy ground on my face. Who pushed me down?</Text>
+            <Text>Glaring at the possible culprit, my eyes only narrowed to see the man on the camel with a smirk plastered on his lips. Our stares never lasted however, due to the fact that he had whipped me on the face as if trying to state that I was beneath him.</Text>
+            <Text>Great. I was captured by a slave trader.</Text>
+            <Text>And with that, the start of the tales of my life as a slave, where I had died the year after I was turned into a slave, began.</Text>
+            <Text>Talk about bad decisions.</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+      </Nodes>
+    </Node>
+    <Node Name="caravan">
+      <Texts>
+        <Text>It's a long caravan.</Text>
+        <Text>Approaching the caravan, I asked if I could travel with them. Perhaps, I can find clues about Astaris during the travel?</Text>
+        <Text>Sadly, I was denied of entry not until I saw in one of their delivery wagons, an advertisement.</Text>
+        <Text>They were looking for a porter.</Text>
+        <Text>I don't know if I'm confident enough with my strength, but, this is my last chance!</Text>
+        <Text>"Sir! If you're not able to allow me to travel with you, can I apply as a porter instead?"</Text>
+        <Text>The leader of the caravan sighed, "Why are you so desperate, young man?"</Text>
+        <Text>Should I tell the truth or not about Astaris and about my amnesia?</Text>
+      </Texts>
+      <Choices>
+        <Choice Name="truth">
+          <Text>I'm going to tell the truth</Text>
+        </Choice>
+        <Choice Name="whitelie">
+          <Text>I'm going to tell a little white lie.</Text>
+        </Choice>
+        <Choice Name="lie">
+          <Text>I'm not going to tell the truth</Text>
+        </Choice>
+      </Choices>
+      <Nodes>
+        <Node Name="truth">
+          <Texts>
+            <Text>And that's when I told everything. As soon as I showed the word behind the brooch to the leader of the caravan, he quickly decided to change the direction of the caravan.</Text>
+            <Text>"Where are we going, sir?"</Text>
+            <Text>"To Astaris."</Text>
+            <Text>"You know about it?"</Text>
+            <Text>"Know about it? I lived in it. It's my hometown, young man."</Text>
+            <Text>Turning to the north-eastern direction, Panra, the leader's name which he gave me just awhile ago after we made our turn, talked about various of things about Astaris.</Text>
+            <Text>"Astaris is the home of merchants. You can say it's one of the richest city in the country."</Text>
+            <Text>"It's also the main city because, it's where the palace of the Gierroh Royal Family is located."</Text>
+            <Text>"By the way, why do you have that royal family seal on you?"</Text>
+            <Text>"But, this is a brooch," I raised an eyebrow.</Text>
+            <Text>"No high-class merchant is fooled by such item. Well, at least the noble-type merchants."</Text>
+            <Text>"If you turn nudge and turn the gleaming side... yes, yes that red gem. Turn that, and you'll see the royal seal."</Text>
+            <Text>"One stamp of that and it will authorize everything that is stated on the paper that it had the stamp on."</Text>
+            <Text>"Unless, of course... you were in another country."</Text>
+            <Text>Now, I get it. This leader guy called Panra, "You're a noble-type merchant, aren't you?"</Text>
+            <Text>"Don't be too slow, my boy. I revealed myself to you through that explanation, didn't I?" Panra shook his head, "You don't need my life story on how I ended up in this normal merchant caravan."</Text>
+            <Text>"Also, you never answered my question."</Text>
+            <Text>Scratching behind my head, I didn't know what I could say. Honestly, I didn't know either. I already told him I had amnesia.</Text>
+            <Text>I looked at the brooch. Astaris, "Well, sir. I just woke up with it."</Text>
+            <Text>Panra looked at me in the eye and called out to someone from one of the delivery wagons, "Hey Isma. You worked for the royal family, right?"</Text>
+            <Text>An old lady came out in a small smile with eyes dancing in mirth as she stared at me and my brooch, "Why yes, Panra."</Text>
+            <Text>"You happened to see this guy in the castle?"</Text>
+            <Text>"Yes, yes I did."</Text>
+            <Text>Panra turned his head back to me after conversing with the old lady called Isma, "Maybe you were a worker there trusted to carry that seal as a carrier to hide it from possible enemies during that grand palace event a month ago."</Text>
+            <Text>Brushing around the brooch with my hand, "Then, I should give this back as soon as possible."</Text>
+            <Text>Isma chuckled, "I never said I saw you working there, dearie."</Text>
+            <Text>Panra, who was drinking his fill from his waterbottle, had almost spit out the water from his mouth, "Don't tell me?!"</Text>
+            <Text>"After the grand palace event a month ago, the youngest prince was found missing and his highness, King Omunra ordered for a search of Prince Ehki."</Text>
+            <Text>"You'll get a handsome reward for returning Prince Ehki, Panra. Enough to rebuild your noble merchant clan, right?"</Text>
+            <Text>"Isma, you-?"</Text>
+            <Text>Everything was going fast. My name's Ehki and more importantly, I was a prince?</Text>
+            <Text>Judging from the story, I was probably kidnapped in an attempt to find the royal family seal with me, only to not succeed because, no one other than the royal family and noble merchant clans knew how it looked like.</Text>
+            <Text>Probably the reason why I was left alone in the desert to fend for myself.</Text>
+            <Text>As I tried to process my thoughts, I looked up to see the walls of Astaris, my home.</Text>
+            <Text>"I am... Prince Ehki."</Text>
+            <Text>I closed my eyes and slowly opened them as the brooch glowed with my memories slowly returning.</Text>
+            <Text>"I'm home."</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+        <Node Name="whitelie">
+          <Texts>
+            <Text>I'm going to tell a little white lie. I'll leave out the thing about the Astaris and just mention about my amnesia.</Text>
+            <Text>"You see, sir. Your caravan will give me opportunities to seek out the truth of who I am and where I came from. I woke up in the middle of the desert with no memories and your caravan is the first help I could find. I just want to survive and find out who I am."</Text>
+            <Text>Not totally convinced, it tooks some time for the leader to decide but, he finally agreed.</Text>
+            <Text>I did my job properly. And in the end, I stayed with the caravan. I greatly enjoyed the caravan too much that they became my family.</Text>
+            <Text>My priorities also got twisted along the way as well and I had forgotten about my original quest.</Text>
+            <Text>Past is past...right?</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+        <Node Name="lie">
+          <Texts>
+            <Text>I'm not going to tell the truth.</Text>
+            <Text>"I really need the job, sir. I have no money and food. That is why I'm desperate. I want to continue living."</Text>
+            <Text>Reluctantly, the leader of the caravan agreed but with a condition of just having me take the job until the nearest town.</Text>
+            <Text>Well, good enough for me!</Text>
+            <Text>As we traveled to the nearest town, I could feel the buzzing sensation of my brooch going stronger. Was that a bad sign?</Text>
+            <Text>Probably because I lied to the leader of the caravan. Well, that was annoying.</Text>
+            <Text>Grabbing the brooch, I threw it outside the wagon and left it to the dust.</Text>
+            <Text>There. That takes care of it.</Text>
+            <Text>It was already an hour and we still haven't arrived. It was supposed to be faster, but the growing strength of the winds was making it diffiult for the caravan to go faster.</Text>
+            <Text>"Hey, Isma!" The leader of the caravan called out, "I thought there was no sandstorm today! Was your prediction wrong?"</Text>
+            <Text>An old lady came out with a frown on her face, but, weirdly, her eyes danced with mirth at me as if she knows something I didn't, "The prediction was correct. There was supposed to be no sandstorm today. At least, not natural ones."</Text>
+            <Text>The leader didn't get what she said as she disappeared back inside the wagon.</Text>
+            <Text>"Ugh, she got the prediction wrong. That's a first."</Text>
+            <Text>With that, the caravan never reached that nearest town.</Text>
+          </Texts>
+          <Choices>
+            <Choice Name="end">
+              <Text>END!</Text>
+            </Choice>
+          </Choices>
+          <Nodes />
+        </Node>
+      </Nodes>
+    </Node>
+    <Node Name="end">
+      <Texts>
+        <Text>END!</Text>
+      </Texts>
+      <Nodes />
+    </Node>
+  </Nodes>
+</AstarisAdventure>
