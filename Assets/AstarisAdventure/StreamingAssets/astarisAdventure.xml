@@ -52,7 +52,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -67,7 +67,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -124,7 +124,7 @@
               </Texts>
               <Choices>
                 <Choice Name="end">
-                  <Text>END!</Text>
+                  <Text>Go to Menu</Text>
                 </Choice>
               </Choices>
               <Nodes />
@@ -156,7 +156,7 @@
               </Texts>
               <Choices>
                 <Choice Name="end">
-                  <Text>end!</Text>
+                  <Text>Go to Menu</Text>
                 </Choice>
               </Choices>
               <Nodes />
@@ -183,7 +183,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -255,7 +255,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -271,7 +271,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -295,7 +295,7 @@
           </Texts>
           <Choices>
             <Choice Name="end">
-              <Text>END!</Text>
+              <Text>Go to Menu</Text>
             </Choice>
           </Choices>
           <Nodes />
@@ -304,7 +304,7 @@
     </Node>
     <Node Name="end">
       <Texts>
-        <Text>END!</Text>
+        <Text>Go to Menu</Text>
       </Texts>
       <Nodes />
     </Node>
