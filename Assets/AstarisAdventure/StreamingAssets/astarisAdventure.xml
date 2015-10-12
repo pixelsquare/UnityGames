@@ -12,13 +12,13 @@
         <Text>But, as I looked behind me, I managed to see something from a distance. It's a/an...</Text>
       </Texts>
       <Choices>
-        <Choice Name="choice_1">
+        <Choice Name="oasis">
           <Text>Oasis</Text>
         </Choice>
-        <Choice Name="choice_2">
+        <Choice Name="camel">
           <Text>Person riding a camel</Text>
         </Choice>
-        <Choice Name="choice_3">
+        <Choice Name="caravan">
           <Text>Long Caravan</Text>
         </Choice>
       </Choices>
@@ -31,15 +31,15 @@
         <Text>Well, it was dry out here and I do need some water. I think I should...</Text>
       </Texts>
       <Choices>
-        <Choice Name="choice_1">
+        <Choice Name="walk">
           <Text>Walk to the oasis</Text>
         </Choice>
-        <Choice Name="choice_2">
+        <Choice Name="stay">
           <Text>Stay here</Text>
         </Choice>
       </Choices>
       <Nodes>
-        <Node Name="node1">
+        <Node Name="walk">
           <Texts>
             <Text>I think I should walk to the oasis. It makes sense to drink water from it right?</Text>
             <Text>"I really don't want to be dehydrated."</Text>
@@ -57,7 +57,7 @@
           </Choices>
           <Nodes />
         </Node>
-        <Node Name="node2">
+        <Node Name="stay">
           <Texts>
             <Text>I think I should stay here and keep on the look out for real stuff. I mean that might just be an illusion.</Text>
             <Text>When I reach that place, that oasis will probably disappear.</Text>
@@ -92,30 +92,30 @@
         <Text>"I...</Text>
       </Texts>
       <Choices>
-        <Choice Name="choice_1">
+        <Choice Name="directions">
           <Text>only need to know the directions. I can manage."</Text>
         </Choice>
-        <Choice Name="choice_2">
+        <Choice Name="ride">
           <Text>guess I'll go for a ride. It makes things easier."</Text>
         </Choice>
       </Choices>
       <Nodes>
-        <Node Name="node1">
+        <Node Name="directions">
           <Texts>
             <Text>"I only need to know the directions. I can manage."</Text>
             <Text>With those words, the man on his camel left on a huff. He seemed to be angry at me as he left.</Text>
             <Text>Was that really necessary? I didn't know not riding on the camel was offensive in this place. Now, what do I do?</Text>
           </Texts>
           <Choices>
-            <Choice Name="choice_1">
+            <Choice Name="stay">
               <Text>Stay Here</Text>
             </Choice>
-            <Choice Name="choice_2">
+            <Choice Name="follow">
               <Text>Follow the direction the man on the camel went to:</Text>
             </Choice>
           </Choices>
           <Nodes>
-            <Node Name="node1_1">
+            <Node Name="stay">
               <Texts>
                 <Text>I think I should stay here and keep on the look out.</Text>
                 <Text>Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught to me due to dehydration.</Text>
@@ -129,7 +129,7 @@
               </Choices>
               <Nodes />
             </Node>
-            <Node Name="node1_2">
+            <Node Name="follow">
               <Texts>
                 <Text>Well, it's a very long walk. Somehow, I was wishing I rode that camel.</Text>
                 <Text>But, it was because that guy looked too suspicious to me. I wanted to be safe and sure.</Text>
@@ -163,7 +163,7 @@
             </Node>
           </Nodes>
         </Node>
-        <Node Name="node2">
+        <Node Name="ride">
           <Texts>
             <Text>"I guess I'll go for a ride. It makes things easier."</Text>
             <Text>Helping my self up on the camel, we rode towards the nearest town. Good thing I rode with the man.</Text>
@@ -190,7 +190,7 @@
         </Node>
       </Nodes>
     </Node>
-    <Node Name="node3">
+    <Node Name="caravan">
       <Texts>
         <Text>It's a long caravan.</Text>
         <Text>Approaching the caravan, I asked if I could travel with them. Perhaps, I can find clues about Astaris during the travel?</Text>
@@ -202,18 +202,18 @@
         <Text>Should I tell the truth or not about Astaris and about my amnesia?</Text>
       </Texts>
       <Choices>
-        <Choice Name="choice_1">
+        <Choice Name="truth">
           <Text>I'm going to tell the truth</Text>
         </Choice>
-        <Choice Name="choice_2">
+        <Choice Name="whitelie">
           <Text>I'm going to tell a little white lie.</Text>
         </Choice>
-        <Choice Name="choice_3">
+        <Choice Name="lie">
           <Text>I'm not going to tell the truth</Text>
         </Choice>
       </Choices>
       <Nodes>
-        <Node Name="node1">
+        <Node Name="truth">
           <Texts>
             <Text>And that's when I told everything. As soon as I showed the word behind the brooch to the leader of the caravan, he quickly decided to change the direction of the caravan.</Text>
             <Text>"Where are we going, sir?"</Text>
@@ -260,7 +260,7 @@
           </Choices>
           <Nodes />
         </Node>
-        <Node Name="node2">
+        <Node Name="whitelie">
           <Texts>
             <Text>I'm going to tell a little white lie. I'll leave out the thing about the Astaris and just mention about my amnesia.</Text>
             <Text>"You see, sir. Your caravan will give me opportunities to seek out the truth of who I am and where I came from. I woke up in the middle of the desert with no memories and your caravan is the first help I could find. I just want to survive and find out who I am."</Text>
@@ -276,7 +276,7 @@
           </Choices>
           <Nodes />
         </Node>
-        <Node Name="node3">
+        <Node Name="lie">
           <Texts>
             <Text>I'm not going to tell the truth.</Text>
             <Text>"I really need the job, sir. I have no money and food. That is why I'm desperate. I want to continue living."</Text>
