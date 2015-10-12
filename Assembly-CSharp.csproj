@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\AstarisAdventure\Scripts\Buttons\ChoicesButtons.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Buttons\WindowButtons.cs" />
+     <Compile Include="Assets\AstarisAdventure\Scripts\Screens\AdvMain.cs" />
+     <Compile Include="Assets\AstarisAdventure\Scripts\Screens\AdvTitle.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextHandler.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextReader.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Texts\AdvTextWriter.cs" />
