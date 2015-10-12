@@ -13,15 +13,18 @@ public class AdvTextHandler : MonoBehaviour {
 		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_NEXTBTN_CLICK, PrintNextText);
 		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_BACKBTN_CLICK, PrintPreviousText);
 		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_CHOICE_BTN_CLICK, UpdateXMLText);
+		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_TITLE_CLICK, OnTitleClick);
 	}
 
 	public void OnDisable() {
 		EventBroadcaster.sharedInstance.RemoveObserverAction(AdvNames.ON_NEXTBTN_CLICK, PrintNextText);
 		EventBroadcaster.sharedInstance.RemoveObserverAction(AdvNames.ON_BACKBTN_CLICK, PrintPreviousText);
 		EventBroadcaster.sharedInstance.RemoveObserverAction(AdvNames.ON_CHOICE_BTN_CLICK, UpdateXMLText);
+		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_TITLE_CLICK);
 	}
 
-	public void Start() {
+	public void OnTitleClick() {
+		advReader.InitXMLRoot();
 		advWriter.Write(advReader.GetCurText());
 		UpdateWindowButtons();
 	}
@@ -48,6 +51,11 @@ public class AdvTextHandler : MonoBehaviour {
 
 	public void UpdateXMLText(Parameters param) {
 		string nodeId = param.GetExtra(AdvNames.CHOICE_BTN_ID, "empty!");
+		if (nodeId == "end") {
+			EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_GOTOMENU_CLICK);
+			return;
+		}
+		
 		advReader.LoadNodeParent(nodeId);
 		advWriter.Write(advReader.GetCurText());
 		UpdateWindowButtons();

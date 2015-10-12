@@ -67,7 +67,7 @@ public class AdvXML : MonoBehaviour {
 			"Only to realize that the color of the supposed water was different. I drank something that's not water.",
 			"But, it was too late. The surroundings around me grew dim as I felt my heart coming slowly to a stop.",
 			"Sigh, I guess I'll never found out who I am. I'm so lame."
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		oasis.AddNode(node1);
 
 		AdvNode node2 = new AdvNode("stay", new string[5] {
@@ -76,7 +76,7 @@ public class AdvXML : MonoBehaviour {
 			"Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught up to me due to dehydration.",
 			"Falling into a slump on the sandy ground, I passed out.",
 			"Really, no one stays in one spot under this heat. I should've died with a little more effort of moving around the place."
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		oasis.AddNode(node2);
 
 		root.nodes[1] = oasis;
@@ -117,7 +117,7 @@ public class AdvXML : MonoBehaviour {
 			"Minutes turned to hours as I kept on the look out for other things, remaining on the same spot. And in a little while, dizziness caught to me due to dehydration.",
 			"Falling into a slump on the sandy ground, I passed out.",
 			"Really, no one stays in one spot under this heat. I should've died with a little more effort of moving around the place."
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		node1.AddNode(node1_1);
 
 		AdvNode node1_2 = new AdvNode("follow", new string[22] {
@@ -143,7 +143,7 @@ public class AdvXML : MonoBehaviour {
 			"Talking to the leader of the caravan, I applied for the position. He had a look of doubt but, when I demonstrated my strength. It was enough for him.",
 			"In the end, I journeyed with the caravan as I enjoyed my job. They became family.",
 			"Long forgotten is my quest for my identity and Astaris."
-		}, new AdvChoices("end", "end!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		node1.AddNode(node1_2);
 		camel.AddNode(node1);
 
@@ -163,7 +163,7 @@ public class AdvXML : MonoBehaviour {
 			"Great. I was captured by a slave trader.",
 			"And with that, the start of the tales of my life as a slave, where I had died the year after I was turned into a slave, began.",
 			"Talk about bad decisions."
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		camel.AddNode(node2);
 
 		root.nodes[2] = camel;
@@ -223,7 +223,7 @@ public class AdvXML : MonoBehaviour {
 			"\"I am... Prince Ehki.\"",
 			"I closed my eyes and slowly opened them as the brooch glowed with my memories slowly returning.",
 			"\"I'm home.\""
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		caravan.AddNode(node1);
 
 		AdvNode node2 = new AdvNode("whitelie", new string[6] {
@@ -233,7 +233,7 @@ public class AdvXML : MonoBehaviour {
 			"I did my job properly. And in the end, I stayed with the caravan. I greatly enjoyed the caravan too much that they became my family.",
 			"My priorities also got twisted along the way as well and I had forgotten about my original quest.",
 			"Past is past...right?"
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		caravan.AddNode(node2);
 
 		AdvNode node3 = new AdvNode("lie", new string[14] {
@@ -251,14 +251,14 @@ public class AdvXML : MonoBehaviour {
 			"The leader didn't get what she said as she disappeared back inside the wagon.",
 			"\"Ugh, she got the prediction wrong. That's a first.\"",
 			"With that, the caravan never reached that nearest town."
-		}, new AdvChoices("end", "END!"));
+		}, new AdvChoices("end", "Go to Menu"));
 		caravan.AddNode(node3);
 
 		root.nodes[3] = caravan;
 	}
 
 	public void EndNode() {
-		AdvNode end = new AdvNode("end", new string[1] { "END!"});
+		AdvNode end = new AdvNode("end", new string[1] { "Go to Menu" });
 		root.nodes[4] = end;
 	}
 }

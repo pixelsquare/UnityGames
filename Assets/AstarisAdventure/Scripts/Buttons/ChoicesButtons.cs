@@ -47,10 +47,6 @@ public class ChoicesButtons : MonoBehaviour {
 	}
 
 	public void UpdateWindowButtons(Parameters param) {
-		if (param.GetExtra(AdvNames.ON_LAST_NODE, false)) {
-			AdvUtils.EnableAllChildren(transform);
-		}
-
 		buttons = param.GetExtra(AdvNames.WINDOW_CHOICES, buttons);
 		UpdateButtonNames();
 	}
@@ -62,6 +58,7 @@ public class ChoicesButtons : MonoBehaviour {
 		for (int i = 0; i < buttons.Count; i++) {
 			AdvChoices choice = buttons[i] as AdvChoices;
 			buttonTexts[i].text = choice.text;
+			buttonTexts[i].transform.parent.gameObject.SetActive(true);
 		}
 	}
 }

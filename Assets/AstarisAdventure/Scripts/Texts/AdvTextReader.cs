@@ -12,15 +12,11 @@ public class AdvTextReader : MonoBehaviour {
 	
 	public const string XML_NAME = "astarisAdventure";
 	public const string XML_EXT = ".xml";
-
-	public void OnEnable() {
+	
+	public void InitXMLRoot() {
 		curNodeIndx = 0;
 		curTextIndx = 0;
 
-		InitXMLRoot();
-	}
-	
-	public void InitXMLRoot() {
 		System.Text.StringBuilder pathString = new System.Text.StringBuilder();
 		pathString.Append(XML_NAME);
 		pathString.Append(XML_EXT);
