@@ -32,16 +32,34 @@ public class SSPlaneControl : MonoBehaviour {
 	}
 
 	public void Update() {
+		ShipMovement();
+
+		if (Input.GetMouseButtonDown(0)) {
+			FireMissile();
+		}
+	}
+
+	public void ShipMovement() {
 		Vector3 pos = transform.position;
-		if (!freezeX) { 
+		if (!freezeX) {
 			pos.x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
 			pos.x = Mathf.Clamp(pos.x, -screenBounds.x, screenBounds.x);
 		}
 
-		if (!freezeY) { 
+		if (!freezeY) {
 			pos.y = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
 			pos.y = Mathf.Clamp(pos.y, -screenBounds.y, screenBounds.y);
 		}
 		transform.position = pos;
+	}
+
+	public void FireMissile() {
+		for (int i = 0; i < shipBarrel.Barrels.Length; i++) {
+			GameObject missile = SSObjectPool.sharedInstance.GetObject(SSObjectID.SHIP_MISSILE);
+			if (missile != null) {
+				missile.transform.position = shipBarrel.Barrels[i].position;
+				missile.SetActive(true);
+			}
+		}
 	}
 }
