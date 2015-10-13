@@ -60,9 +60,11 @@
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvRoot.cs" />
      <Compile Include="Assets\AstarisAdventure\Scripts\Xml\AdvXML.cs" />
      <Compile Include="Assets\Shooter\Scripts\Barrel\SSBarrel.cs" />
+     <Compile Include="Assets\Shooter\Scripts\Missile\SSMissile.cs" />
      <Compile Include="Assets\Shooter\Scripts\Missile\SSMissileControl.cs" />
      <Compile Include="Assets\Shooter\Scripts\ObjectPool\SSObjectPool.cs" />
      <Compile Include="Assets\Shooter\Scripts\Ship\SSPlaneControl.cs" />
+     <Compile Include="Assets\Shooter\Scripts\Utils\SSObjectID.cs" />
      <Compile Include="Assets\Utils\EventBroadcaster.cs" />
      <Compile Include="Assets\Utils\ObjectListener.cs" />
      <Compile Include="Assets\Utils\Parameters.cs" />
