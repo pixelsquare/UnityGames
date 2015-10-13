@@ -17,7 +17,7 @@ public class AdvTitle : MonoBehaviour {
 
 	public void Update() {
 		if (Input.GetMouseButtonDown(0) && !disableMouseClick) {
-			EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_TITLE_CLICK);
+			EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_TITLE_CLICK);
 		}
 	}
 

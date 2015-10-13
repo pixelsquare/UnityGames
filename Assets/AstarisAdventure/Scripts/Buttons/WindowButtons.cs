@@ -24,11 +24,11 @@ public class WindowButtons : MonoBehaviour {
 	//}
 
 	public void OnNextButtonClick() {
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_NEXTBTN_CLICK);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_NEXTBTN_CLICK);
 	}
 
 	public void OnBackButtonClick() {
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_BACKBTN_CLICK);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_BACKBTN_CLICK);
 	}
 
 	public void UpdateWindowButtons(Parameters param) {

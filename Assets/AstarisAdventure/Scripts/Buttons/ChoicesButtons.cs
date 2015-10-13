@@ -26,7 +26,7 @@ public class ChoicesButtons : MonoBehaviour {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[0] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
 		AdvUtils.DisableAllChildren(transform);
 	}
 
@@ -34,7 +34,7 @@ public class ChoicesButtons : MonoBehaviour {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[1] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
 		AdvUtils.DisableAllChildren(transform);
 	}
 
@@ -42,7 +42,7 @@ public class ChoicesButtons : MonoBehaviour {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[2] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
 		AdvUtils.DisableAllChildren(transform);
 	}
 

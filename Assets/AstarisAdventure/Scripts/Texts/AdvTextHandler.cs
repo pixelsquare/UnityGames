@@ -52,7 +52,7 @@ public class AdvTextHandler : MonoBehaviour {
 	public void UpdateXMLText(Parameters param) {
 		string nodeId = param.GetExtra(AdvNames.CHOICE_BTN_ID, "empty!");
 		if (nodeId == "end") {
-			EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_GOTOMENU_CLICK);
+			EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_GOTOMENU_CLICK);
 			return;
 		}
 		
@@ -65,7 +65,7 @@ public class AdvTextHandler : MonoBehaviour {
 		Parameters btnUpdate = new Parameters();
 		btnUpdate.PutExtra(AdvNames.ON_FIRST_NODE, advReader.OnFirstTextNode());
 		btnUpdate.PutExtra(AdvNames.ON_LAST_NODE, advReader.OnLastTextNode());
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_WINDOW_BTN_CLICK, btnUpdate);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_WINDOW_BTN_CLICK, btnUpdate);
 
 		if (advReader.OnLastTextNode()) {
 			StartCoroutine(PostButtonUpdate());
@@ -84,6 +84,6 @@ public class AdvTextHandler : MonoBehaviour {
 		ArrayList choices = new ArrayList(advReader.GetChoices());
 		btnUpdate.PutExtra(AdvNames.WINDOW_CHOICES, choices);
 
-		EventBroadcaster.sharedInstance.CallObserver(AdvNames.ON_POST_WINDOW_BTN_CLICK, btnUpdate);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_POST_WINDOW_BTN_CLICK, btnUpdate);
 	}
 }

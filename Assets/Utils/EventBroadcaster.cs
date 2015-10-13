@@ -59,14 +59,14 @@ public class EventBroadcaster {
 		}
 	}
 
-	public void CallObserver(string name) {
+	public void NotifyObserver(string name) {
 		if (objListener.ContainsKey(name)) {
 			ObjectListener listener = objListener[name];
 			listener.NotifyObservers();
 		}
 	}
 
-	public void CallObserver(string name, Parameters param) {
+	public void NotifyObserver(string name, Parameters param) {
 		if (objListener.ContainsKey(name)) {
 			ObjectListener listener = objListener[name];
 			listener.NotifyObservers(param);
