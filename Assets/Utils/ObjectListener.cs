@@ -15,11 +15,21 @@ public class ObjectListener {
 		paramEvents = new List<System.Action<Parameters>>();
 	}
 
-	public void AddObserver(System.Action action) {
+	public void AddObserver(System.Action action, bool prepend = false) {
+		if (prepend) {
+			noParamEvents.Insert(0, action);
+			return;
+		}
+
 		noParamEvents.Add(action);
 	}
 
-	public void AddObserver(System.Action<Parameters> action) {
+	public void AddObserver(System.Action<Parameters> action, bool prepend = false) {
+		if (prepend) {
+			paramEvents.Insert(0, action);
+			return;
+		}
+
 		paramEvents.Add(action);
 	}
 

@@ -19,28 +19,40 @@ public class EventBroadcaster {
 		objListener = new Dictionary<string, ObjectListener>();
 	}
 
-	public void AddObserver(string name, System.Action action) {
+	/// <summary>
+	/// Adds an observer with no parameters
+	/// </summary>
+	/// <param name="name">Name Identifier</param>
+	/// <param name="action">Function</param>
+	/// <param name="prepend">Add at the beginning</param>
+	public void AddObserver(string name, System.Action action, bool prepend = false) {
 		ObjectListener listener = null;
 		if (objListener.ContainsKey(name)) {
 			listener = objListener[name];
-			listener.AddObserver(action);
+			listener.AddObserver(action, prepend);
 		}
 		else {
 			listener = new ObjectListener();
-			listener.AddObserver(action);
+			listener.AddObserver(action, prepend);
 			objListener.Add(name, listener);
 		}
 	}
 
-	public void AddObserver(string name, System.Action<Parameters> action) {
+	/// <summary>
+	/// Adds an observer with parameters
+	/// </summary>
+	/// <param name="name">Name Identifer</param>
+	/// <param name="action">Function</param>
+	/// <param name="prepend">Add at the beginning</param>
+	public void AddObserver(string name, System.Action<Parameters> action, bool prepend = false) {
 		ObjectListener listener = null;
 		if (objListener.ContainsKey(name)) {
 			listener = objListener[name];
-			listener.AddObserver(action);
+			listener.AddObserver(action, prepend);
 		}
 		else {
 			listener = new ObjectListener();
-			listener.AddObserver(action);
+			listener.AddObserver(action, prepend);
 			objListener.Add(name, listener);
 		}
 	}
