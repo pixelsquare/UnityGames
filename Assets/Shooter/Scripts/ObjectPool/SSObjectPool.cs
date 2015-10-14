@@ -23,6 +23,14 @@ public class SSObjectPool : MonoBehaviour {
 
 	public static SSObjectPool sharedInstance;
 
+	public void OnEnable() {
+		EventBroadcaster.sharedInstance.AddObserver(SSNames.ON_GAME_OVER, OnGameOver);
+	}
+
+	public void OnDisable() {
+		EventBroadcaster.sharedInstance.RemoveObserverAction(SSNames.ON_GAME_OVER, OnGameOver);
+	}
+
 	public void Start() {
 		sharedInstance = this;
 		objectList = new Dictionary<SSObjectID, SSPooledObject>();
@@ -47,6 +55,10 @@ public class SSObjectPool : MonoBehaviour {
 			pooledObj.objList = objList;
 			objectList.Add(pooledObjects[i].objID, pooledObj);
 		}
+	}
+
+	public void OnGameOver() {
+		ResetPool();
 	}
 
 	public void AddObject(SSObjectID name, GameObject obj) {
@@ -94,5 +106,20 @@ public class SSObjectPool : MonoBehaviour {
 		}
 
 		return null;
+	}
+
+	public void ResetPool() {
+		foreach (SSObjectID id in objectList.Keys) {
+			List<GameObject> objList = objectList[id].objList;
+			if (objList == null || objList.Count <= 0)
+				continue;
+
+			for (int i = 0; i < objList.Count; i++) {
+				if (!objList[i].activeInHierarchy)
+					continue;
+
+				objList[i].SetActive(false);
+			}
+		}
 	}
 }
