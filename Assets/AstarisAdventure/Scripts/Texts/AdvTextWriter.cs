@@ -22,11 +22,11 @@ public class AdvTextWriter : MonoBehaviour {
 	private const float TYPEWRITE_DELAY = 0.1f;
 
 	public void OnEnable() {
-		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_GOTOMENU_CLICK, OnGoToMenu);
+		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_GOTOMENU_CLICKED, OnGoToMenu);
 	}
 
 	public void OnDisable() {
-		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_GOTOMENU_CLICK);
+		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_GOTOMENU_CLICKED);
 	}
 
 	public void Start() {

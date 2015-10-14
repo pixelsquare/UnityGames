@@ -6,28 +6,28 @@ public class AdvTitle : MonoBehaviour {
 	private bool disableMouseClick;
 
 	public void OnEnable() {
-		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_TITLE_CLICK, OnTitleClick);
-		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_GOTOMENU_CLICK, OnGoToMenuClick);
+		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_TITLE_CLICKED, OnTitleClick);
+		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_GOTOMENU_CLICKED, OnGoToMenuClick);
 	}
 
 	public void OnDisable() {
-		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_TITLE_CLICK);
-		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_GOTOMENU_CLICK);
+		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_TITLE_CLICKED);
+		EventBroadcaster.sharedInstance.RemoveObserver(AdvNames.ON_GOTOMENU_CLICKED);
 	}
 
 	public void Update() {
 		if (Input.GetMouseButtonDown(0) && !disableMouseClick) {
-			EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_TITLE_CLICK);
+			EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_TITLE_CLICKED);
 		}
 	}
 
 	public void OnTitleClick() {
-		AdvUtils.DisableAllChildren(transform);
+		Utils.DisableAllChildren(transform);
 		disableMouseClick = true;
 	}
 
 	public void OnGoToMenuClick() {
-		AdvUtils.EnableAllChildren(transform);
+		Utils.EnableAllChildren(transform);
 		disableMouseClick = false;
 	}
 }
