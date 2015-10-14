@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ChoicesButtons : MonoBehaviour {
+public class AdvChoicesButtons : MonoBehaviour {
 
 	[SerializeField]
 	private Text[] buttonTexts;
@@ -10,40 +10,40 @@ public class ChoicesButtons : MonoBehaviour {
 	private ArrayList buttons;
 
 	public void OnEnable() {
-		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_POST_WINDOW_BTN_CLICK, UpdateWindowButtons);
+		EventBroadcaster.sharedInstance.AddObserver(AdvNames.ON_POST_WINDOW_BTN_CLICKED, UpdateWindowButtons);
 	}
 
 	public void OnDisable() {
-		EventBroadcaster.sharedInstance.RemoveObserverAction(AdvNames.ON_POST_WINDOW_BTN_CLICK, UpdateWindowButtons);
+		EventBroadcaster.sharedInstance.RemoveObserverAction(AdvNames.ON_POST_WINDOW_BTN_CLICKED, UpdateWindowButtons);
 	}
 
 	public void Start() {
 		buttons = new ArrayList();
-		AdvUtils.DisableAllChildren(transform);
+		Utils.DisableAllChildren(transform);
 	}
 
 	public void OnButton1Click() {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[0] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
-		AdvUtils.DisableAllChildren(transform);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICKED, param);
+		Utils.DisableAllChildren(transform);
 	}
 
 	public void OnButton2Click() {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[1] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
-		AdvUtils.DisableAllChildren(transform);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICKED, param);
+		Utils.DisableAllChildren(transform);
 	}
 
 	public void OnButton3Click() {
 		Parameters param = new Parameters();
 		AdvChoices button = buttons[2] as AdvChoices;
 		param.PutExtra(AdvNames.CHOICE_BTN_ID, button.name);
-		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICK, param);
-		AdvUtils.DisableAllChildren(transform);
+		EventBroadcaster.sharedInstance.NotifyObserver(AdvNames.ON_CHOICE_BTN_CLICKED, param);
+		Utils.DisableAllChildren(transform);
 	}
 
 	public void UpdateWindowButtons(Parameters param) {
